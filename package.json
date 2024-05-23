@@ -1,0 +1,18 @@
+{
+  "name": "api-breakingnews",
+  "version": "1.0.0",
+  "description": "Api para SPA Breaking News",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file .env index.js",
+    "server": "nodemon --env-file .env index.js"
+  },
+  "keywords": [],
+  "author": "Renato Gomes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
