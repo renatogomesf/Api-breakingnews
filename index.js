@@ -4,8 +4,13 @@ const app = express()
 
 const port = process.env.PORT
 
-app.get('/', (request,response)=>{
-    response.status(200).send('opa')
+app.use(express.json())
+
+app.get('/soma', (request,response)=>{
+
+    const soma = 100+1
+
+    response.status(200).send({ soma: soma })
 })
 
 app.listen(port, ()=>{
