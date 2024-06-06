@@ -7,10 +7,15 @@ const getAll = () => User.find()
 const getId = (id) => User.findById(id)
 
 // "create":  método do mongoose que cria um novo item dentro do schema e com seus padrões
-const create = (body) => User.create(body)
+const post = (body) => User.create(body)
 
-export default {
-    create,
-    getAll,
-    getId
-}
+// "findOneAndUpdate":  método do mongoose que procura um item dentro do schema e atualiza
+const patch = (id,name,username,email,avatar,background) => User.findOneAndUpdate(
+    // "procura por esse id"
+    {_id: id},
+    // "e atualiza esses campos"
+    {name, username, email, avatar, background}
+)
+
+
+export default {getAll,getId,post,patch}
