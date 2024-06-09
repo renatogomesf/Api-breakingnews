@@ -38,4 +38,4 @@ const validUser = async (request, response, next)=>{
     }
 }
 
-export {validId, validUser}
+export default {validId, validUser}
