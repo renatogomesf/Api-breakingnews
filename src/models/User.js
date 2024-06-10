@@ -20,7 +20,9 @@ const userSchema = new mongoose.Schema({
 
     password: {
         type: String,
-        require: true
+        require: true,
+        // "select: false": quando é feita uma consulta no banco de dados, o password não vem na resposta.
+        select: false
     },
 
     avatar: {
