@@ -85,6 +85,21 @@ class userController{
             response.status(500).send({error:"Connection error"})
         }
     }
+
+
+    async delete(request, response){
+
+        try{
+            const user = request.user
+            
+            await userService.deleteId(user)
+
+            response.status(200).send({"usuário deletado com sucesso":user})
+        }
+        catch(error){
+            response.status(500).send({error:"Connection error"})
+        }
+    }
 }
 
 export default new userController()

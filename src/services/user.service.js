@@ -17,5 +17,8 @@ const patch = (id,name,username,email,avatar,background) => User.findOneAndUpdat
     {name, username, email, avatar, background}
 )
 
+// "deleteOne":  método do mongoose que deleta um item dentro do schema por meio do id
+const deleteId = (user)=> User.deleteOne(user)
 
-export default {getAll,getId,post,patch}
+
+export default {getAll,getId,post,patch,deleteId}

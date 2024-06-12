@@ -12,4 +12,6 @@ route.post('/', userController.post)
 
 route.patch('/:id', middlewares.validId, middlewares.validUser, userController.patch)
 
+route.delete('/:id', middlewares.validId, middlewares.validUser, userController.delete)
+
 export default route
