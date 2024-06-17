@@ -1,7 +1,7 @@
 {
-  "name": "api-breakingnews",
+  "name": "api-mongodb",
   "version": "1.0.0",
-  "description": "Api para SPA Breaking News",
+  "description": "Api com mongodb",
   "main": "index.js",
   "type": "module",
   "scripts": {
